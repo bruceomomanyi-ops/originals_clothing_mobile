@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Originals</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/jpeg" href="image/originals.jpeg">
+</head>
+
+<body>
+
+<script>
+  const WHATSAPP_NUMBER = "254723339330";
+</script>
+
+<nav class="navbar">
+  <div class="navbar__container">
+    <img src="image/originals.jpeg" width="80">
+
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <ul class="navbar__menu">
+      <li class="navbar__item"><a href="index.html" class="navbar__links">Home</a></li>
+      <li class="navbar__item"><a href="clothing.html" class="navbar__links">Clothing</a></li>
+      <li class="navbar__item"><a href="contacts.html" class="navbar__links">Contacts</a></li>
+      <li class="navbar__btn"><a href="shop.html" class="button">Shop</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="clothing-page">
+  <div class="services__container">
+
+    <a class="product-card" onclick="sendWhatsApp('White T-Shirt - KES 999')">
+      <img src="image/whiteshirt.jpeg" width="200">
+      <p>White T-Shirt<br>KES 999</p>
+    </a>
+
+    <a class="product-card" onclick="sendWhatsApp('Black T-Shirt - KES 999')">
+      <img src="image/blackshirt.jpeg" width="200">
+      <p>Black T-Shirt<br>KES 999</p>
+    </a>
+
+    <a class="product-card" onclick="sendWhatsApp('Black Hoodie - KES 1,099')">
+      <img src="image/blackhoodie.jpeg" width="200">
+      <p>Black Hoodie<br>KES 1,099</p>
+    </a>
+
+    <a class="product-card" onclick="sendWhatsApp('Beanie - KES 450')">
+      <img src="image/blackmarvin.jpeg" width="200">
+      <p>Beanie<br>KES 450</p>
+    </a>
+
+  </div>
+</div>
+
+<script>
+  function sendWhatsApp(product) {
+    const msg = `Hello, I am interested in: ${product}`;
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,
+      "_blank"
+    );
+  }
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>

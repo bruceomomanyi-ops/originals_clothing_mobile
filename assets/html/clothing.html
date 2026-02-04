@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing | Originals</title>
+    <link rel="stylesheet" href="styles.css">
+     <!-- Favicon --> 
+   <link rel="icon" type="image/jpeg" href="image/originals.jpeg">
+</head>
+<body>
+
+<!-- ========================= -->
+<!-- CHANGE WHATSAPP NUMBER -->
+<!-- ========================= -->
+<script>
+    const WHATSAPP_NUMBER = "254712345678"; // ← CHANGE THIS ONLY
+</script>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="navbar__container">
+        <img src="image/originals.jpeg" width="80" alt="Originals Logo">
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+             <span class="bar"></span>
+              <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a href="index.html" class="navbar__links">Home</a></li>
+            <li class="navbar__item"><a href="clothing.html" class="navbar__links">Clothing</a></li>
+            <li class="navbar__item"><a href="contacts.html" class="navbar__links">Contacts</a></li>
+            <li class="navbar__btn"><a href="shop.html" class="button">Shop</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- CLOTHING PAGE -->
+<div class="clothing-page">
+    <div class="services__container">
+
+        <a class="product-card">
+            <img src="image/whiteshirt.jpeg" width="200">
+            <p>Originals T-Shirts<br></p>
+        </a>
+
+
+        <a class="product-card">
+            <img src="image/blackhoodie.jpeg" width="200">
+            <p>Originals Black Hoodies<br></p>
+        </a>
+
+        <a class="product-card">
+            <img src="image/blackmarvin.jpeg" width="200">
+            <p>Originals Beanies<br></p>
+        </a>
+
+    </div>
+</div>
+
+<script>
+    function sendWhatsApp(product) {
+        const message = `Hello, I am interested in: ${product}`;
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank");
+    }
+</script>
+<script src="app.js"></script>
+</body>
+</html>
